@@ -1,0 +1,241 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    height: 50px;
+    width: 50px;
+}
+
+h1 img{
+    height: 100px;
+    width: 100px;
+    margin-top: -20px;
+    margin-left: 30px;
+}
+
+header {
+    background-color: #169bf4;     
+    display: flex;                
+    justify-content: space-between;  
+    align-items: center;             
+    padding: 10px;                  
+    position: fixed;                 
+    top: 0;                          
+    width: 100%;                     
+    z-index: 1000;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.login, .cart {
+    position: relative;
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+.login-detail, .cart-detail {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 220px;
+    z-index: 1000;
+}
+
+.cart img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px;
+    padding: 80px 20px 20px 20px;
+    font-size: 30px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.section-container {
+    background-color: #f0f8ff; /* Màu nền nhẹ nhàng cho container */
+    padding: 0px 70px; /* Thêm khoảng cách bên trong */
+    margin-top: 70px; /* Khoảng cách từ phần trên */
+    border-radius: 10px; /* Bo góc */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+    background-color: #1093f3; /* Nền màu xanh */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px; /* Kích thước chữ lớn hơn */
+    margin-bottom: 30px; /* Khoảng cách dưới tiêu đề */
+    color: #169bf4; /* Màu chữ */
+}
+
+.section {
+    flex: 1; /* Đảm bảo các phần đều nhau */
+    color: white; /* Màu chữ trắng */
+    padding: 20px;
+    margin: 10px; /* Khoảng cách giữa các phần */
+    border-radius: 5px; /* Bo góc */
+    display: flex; /* Sử dụng flexbox để căn chỉnh nội dung */
+    flex-direction: column; /* Căn chỉnh theo chiều dọc */
+}
+
+.section span {
+    font-weight: bold; /* Chữ đậm cho tiêu đề phần */
+    display: block; /* Đảm bảo tiêu đề phần đứng riêng */
+    margin-bottom: 10px; /* Khoảng cách dưới tiêu đề phần */
+}
+
+.section ul {
+    list-style-type: none; /* Bỏ dấu đầu dòng */
+    padding: 0; /* Bỏ khoảng cách bên trong */
+}
+
+.section li {
+    margin: 5px 0; /* Khoảng cách giữa các mục */
+}
+
+.section a {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: white; /* Màu chữ trắng */
+    transition: color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+.section a:hover {
+    color: #e0e0e0; /* Màu chữ khi hover */
+}
+
+.section-container {
+    display: flex; /* Sử dụng flexbox cho container */
+    justify-content: space-between; /* Căn giữa các phần */
+    flex-wrap: wrap; /* Cho phép các phần xuống dòng nếu không đủ chỗ */
+}
+
+.footer-bottom {
+    background-color: #0099ff; /* Màu nền cho footer */
+    color: white; /* Màu chữ trắng */
+    text-align: center; /* Căn giữa nội dung */
+    font-size: 20px; /* Kích thước chữ */
+    padding: 20px 0; /* Thêm khoảng cách bên trong */
+    position: relative; /* Đảm bảo footer không bị cố định */
+    width: 100%; /* Chiều rộng 100% */
+}
+
+.footer-copyright {
+    margin: 0; /* Bỏ khoảng cách */
+}
+
+.footer-policy {
+    list-style: none; /* Bỏ dấu đầu dòng */
+    padding: 0; /* Bỏ khoảng cách bên trong */
+    margin: 0; /* Bỏ khoảng cách bên ngoài */
+}
+
+.footer-policy li {
+    display: inline; /* Hiển thị các mục trong cùng một dòng */
+    margin: 0 15px; /* Khoảng cách giữa các mục */
+}
+
+.footer-policy a {
+    color: white; /* Màu chữ trắng cho liên kết */
+    text-decoration: none; /* Bỏ gạch chân */
+}
+
+.footer-policy a:hover {
+    text-decoration: underline; /* Gạch chân khi hover */
+}
+
+poster img{
+    margin-top: 70px;
+    width: 100%;
+    height: 500px;
+}
+
+nav {
+    display: flex;
+    font-size: 20px;
+}
+
+nav a {
+    margin-right: 60px;
+    text-decoration: none;
+    color: white;
+    position: relative; /* Để định vị menu thả xuống */
+}
+
+.dropdown {
+    position: relative; /* Để định vị menu thả xuống */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute; /* Định vị tuyệt đối */
+    background-color: #169bf4; /* Màu nền cho menu thả xuống */
+    z-index: 1; /* Đảm bảo menu nằm trên các phần khác */
+    border-radius: 5px; /* Bo góc */
+}
+
+.dropdown-content a {
+    color: white; /* Màu chữ trắng */
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin: 0px;
+    border-bottom: 1px solid gray;
+}
+
+.dropdown-content a:hover {
+    background-color: #0a7dc2; /* Màu nền khi hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Hiện menu thả xuống khi hover */
+}
+
+.product img {
+    width: 150px;
+    height: 200px;
+}
+.login{
+    cursor: pointer;
+}

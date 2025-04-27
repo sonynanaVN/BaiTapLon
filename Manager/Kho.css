@@ -1,0 +1,103 @@
+.milk-store{
+    width: 100%;
+    border-top: 2px double red;
+    display: flex;
+    flex-wrap: wrap;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(209, 128, 23);
+}
+.collections{
+    border: 3px solid burlywood;
+    margin: 10px;
+    margin-left: 13px;
+    padding: 10px;
+    border-radius: 6px;
+}
+.collections img{
+    width: 150px;
+    height: 150px;
+}
+.collections button{
+    background-color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    padding: 3px 3px;
+    border-radius: 6px;
+}
+.cost{
+    border: 1px solid burlywood;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+.drop-down{
+    display: none;
+    width: 200px;
+    background-color: antiquewhite;
+    color: azure;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left:15px;
+    border-radius: 6px;
+
+}
+.collections:hover .drop-down{
+    display: block;
+}
+.add-item-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+}
+.modal-content button {
+    padding: 10px;
+    width: 100%;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+.close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}

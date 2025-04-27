@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ẩn tên file khi chọn ảnh</title>
+  <style>
+    #itemImage {
+      display: none;
+    }
+
+    label {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    img {
+      max-width: 300px;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Label thay thế cho input file -->
+  <label for="itemImage">Chọn ảnh</label>
+  <input type="file" id="itemImage" accept="image/*">
+  <br>
+  <img id="preview">
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const input = document.getElementById("itemImage");
+      const preview = document.getElementById("preview");
+
+      input.addEventListener("change", () => {
+        const file = input.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = e => {
+            preview.src = e.target.result;
+            preview.style.display = "block";
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
