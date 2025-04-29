@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Manager/manager.css">
-    <link rel="stylesheet" href="/Manager/Kho.css">
+    <link rel="stylesheet" href="manager.css">
+    <link rel="stylesheet" href="Kho.css">
     <title>Admin Page</title>
 </head>
 <body>
@@ -184,68 +185,12 @@
 
         
 <!-- Thanh content -->
- <h1>Kho hàng tồn dư</h1>
+<h1>Kho hàng tồn dư</h1>
  <h2>Gian hàng sữa thùng</h2>
-        <div class="milk-store store-sua-thung">   
-            <!-- Hàng 1 sữa -->
-            <div class="collections">
-            <img src="/Manager/picture/Pic1.jpg" alt="">
-            <button>Chức năng</button>
-            <div class="drop-down" >
-                <a href="#">+</a>
-                <a href="#">-</a>
-                <a href="#">Đánh dấu có vấn đề</a>
-            </div>
-            <div class="cost">
-                <p>112.000 vnd</p>
-                <p>Còn lại:16 thùng</p>
-            </div>
-        </div>
-        <div class="collections">
-            <img src="/Manager/picture/Pic2.jpg" alt="">
-            <button>Chức năng</button>
-            <div class="drop-down" >
-                <a href="#">+</a>
-                <a href="#">-</a>
-                <a href="#">Đánh dấu có vấn đề</a>
-            </div>
-            <div class="cost">
-                <p>112.000 vnd</p>
-                <p>Còn lại:16 thùng</p>
-            </div>
-        </div>
-        <div class="collections">
-            <img src="/Manager/picture/Pic3.jpg" alt="">
-            <button>Chức năng</button>
-            <div class="drop-down">
-                <a href="#">+</a>
-                <a href="#">-</a>
-                <a href="#">Đánh dấu có vấn đề</a>
-            </div>
-            <div class="cost">
-                <p>112.000 vnd</p>
-                <p>Còn lại:16 thùng</p>
-            </div>
-        </div>
-        <div class="collections">
-            <img src="/Manager/picture/Pic4.jpg" alt="">
-            <button>Chức năng</button>
-            <div class="drop-down">
-                <a href="#">+</a>
-                <a href="#">-</a>
-                <a href="#">Đánh dấu có vấn đề</a>
-            </div>
-            <div class="cost">
-                <p>112.000 vnd</p>
-                <p>Còn lại:16 thùng</p>
-            </div>
-        </div>
-    </div>
-     <h2>Gian hàng sữa bịch</h2>
-    <div class="milk-store store-sua-bich">   
-        <!-- Hàng 2 sữa bịch -->
-        <div class="collections">
-        <img src="/Manager/picture/suabich1.jpg" alt="">
+ <div class="milk-store store-sua-thung">   
+    <!-- Hàng 1 sữa -->
+    <div class="collections">
+        <img src="picture/Pic1.jpg" alt="">
         <button>Chức năng</button>
         <div class="drop-down">
             <a href="#">+</a>
@@ -258,7 +203,7 @@
         </div>
     </div>
     <div class="collections">
-        <img src="/Manager/picture/suabich2.jpg" alt="">
+        <img src="picture/Pic2.jpg" alt="">
         <button>Chức năng</button>
         <div class="drop-down">
             <a href="#">+</a>
@@ -271,7 +216,7 @@
         </div>
     </div>
     <div class="collections">
-        <img src="/Manager/picture/suabich3.jpg" alt="">
+        <img src="picture/Pic3.jpg" alt="">
         <button>Chức năng</button>
         <div class="drop-down">
             <a href="#">+</a>
@@ -284,7 +229,7 @@
         </div>
     </div>
     <div class="collections">
-        <img src="/Manager/picture/suabich4.jpg" alt="">
+        <img src="picture/Pic4.jpg" alt="">
         <button>Chức năng</button>
         <div class="drop-down">
             <a href="#">+</a>
@@ -297,229 +242,285 @@
         </div>
     </div>
 </div>
+
+<h2>Gian hàng sữa bịch</h2>
+<div class="milk-store store-sua-bich">   
+    <div class="collections">
+        <img src="picture/suabich1.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
+    </div>
+    <div class="collections">
+        <img src="picture/suabich2.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
+    </div>
+    <div class="collections">
+        <img src="picture/suabich3.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
+    </div>
+    <div class="collections">
+        <img src="picture/suabich4.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
+    </div>
+</div>
+
 <h2>Gian hàng phô mai</h2>
 <div class="milk-store store-pho-mai">   
-    <!-- Hàng 3 phomai -->
     <div class="collections">
-    <img src="/Manager/picture/phomai1.jpg" alt="">
-    <button>Chức năng</button>
-    <div class="drop-down">
-        <a href="#">+</a>
-        <a href="#">-</a>
-        <a href="#">Đánh dấu có vấn đề</a>
+        <img src="picture/phomai1.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
     </div>
-    <div class="cost">
-        <p>112.000 vnd</p>
-        <p>Còn lại:16 thùng</p>
+    <div class="collections">
+        <img src="picture/Phomai2.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
+    </div>
+    <div class="collections">
+        <img src="picture/Phomai3.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
+    </div>
+    <div class="collections">
+        <img src="picture/Phomai4.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
     </div>
 </div>
-<div class="collections">
-    <img src="/Manager/picture/Phomai2.jpg" alt="">
-    <button>Chức năng</button>
-    <div class="drop-down">
-        <a href="#">+</a>
-        <a href="#">-</a>
-        <a href="#">Đánh dấu có vấn đề</a>
-    </div>
-    <div class="cost">
-        <p>112.000 vnd</p>
-        <p>Còn lại:16 thùng</p>
-    </div>
-</div>
-<div class="collections">
-    <img src="/Manager/picture/Phomai3.jpg" alt="">
-    <button>Chức năng</button>
-    <div class="drop-down">
-        <a href="#">+</a>
-        <a href="#">-</a>
-        <a href="#">Đánh dấu có vấn đề</a>
-    </div>
-    <div class="cost">
-        <p>112.000 vnd</p>
-        <p>Còn lại:16 thùng</p>
-    </div>
-</div>
-<div class="collections">
-    <img src="/Manager/picture/Phomai4.jpg" alt="">
-    <button>Chức năng</button>
-    <div class="drop-down">
-        <a href="#">+</a>
-        <a href="#">-</a>
-        <a href="#">Đánh dấu có vấn đề</a>
-    </div>
-    <div class="cost">
-        <p>112.000 vnd</p>
-        <p>Còn lại:16 thùng</p>
-    </div>
-</div>
-</div>
+
 <h2>Gian hàng sữa đặc</h2>
 <div class="milk-store store-sua-dac">   
-    <!-- Hàng 2 phomai -->
     <div class="collections">
-    <img src="/Manager/picture/suadac1.jpg" alt="">
-    <button>Chức năng</button>
-    <div class="drop-down">
-        <a href="#">+</a>
-        <a href="#">-</a>
-        <a href="#">Đánh dấu có vấn đề</a>
+        <img src="picture/suadac1.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
     </div>
-    <div class="cost">
-        <p>112.000 vnd</p>
-        <p>Còn lại:16 thùng</p>
+    <div class="collections">
+        <img src="picture/suadac2.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
+    </div>
+    <div class="collections">
+        <img src="picture/suadac3.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
+    </div>
+    <div class="collections">
+        <img src="picture/suadac4.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
     </div>
 </div>
-<div class="collections">
-    <img src="/Manager/picture/suadac2.jpg" alt="">
-    <button>Chức năng</button>
-    <div class="drop-down">
-        <a href="#">+</a>
-        <a href="#">-</a>
-        <a href="#">Đánh dấu có vấn đề</a>
-    </div>
-    <div class="cost">
-        <p>112.000 vnd</p>
-        <p>Còn lại:16 thùng</p>
-    </div>
-</div>
-<div class="collections">
-    <img src="/Manager/picture/suadac3.jpg" alt="">
-    <button>Chức năng</button>
-    <div class="drop-down">
-        <a href="#">+</a>
-        <a href="#">-</a>
-        <a href="#">Đánh dấu có vấn đề</a>
-    </div>
-    <div class="cost">
-        <p>112.000 vnd</p>
-        <p>Còn lại:16 thùng</p>
-    </div>
-</div>
-<div class="collections">
-    <img src="/Manager/picture/suadac4.jpg" alt="">
-    <button>Chức năng</button>
-    <div class="drop-down">
-        <a href="#">+</a>
-        <a href="#">-</a>
-        <a href="#">Đánh dấu có vấn đề</a>
-    </div>
-    <div class="cost">
-        <p>112.000 vnd</p>
-        <p>Còn lại:16 thùng</p>
-    </div>
-</div>
-</div>
+
 <h2>Gian hàng sữa chua</h2>
 <div class="milk-store store-sua-chua">   
-    <!-- Hàng 2 phomai -->
     <div class="collections">
-    <img src="/Manager/picture/suachua1.jpg" alt="">
-    <button>Chức năng</button>
-    <div class="drop-down">
-        <a href="#">+</a>
-        <a href="#">-</a>
-        <a href="#">Đánh dấu có vấn đề</a>
+        <img src="picture/suachua1.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
     </div>
-    <div class="cost">
-        <p>112.000 vnd</p>
-        <p>Còn lại:16 thùng</p>
+    <div class="collections">
+        <img src="picture/suachua2.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
+    </div>
+    <div class="collections">
+        <img src="picture/suachua3.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
+    </div>
+    <div class="collections">
+        <img src="picture/suachua4.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
     </div>
 </div>
-<div class="collections">
-    <img src="/Manager/picture/suachua2.jpg" alt="">
-    <button>Chức năng</button>
-    <div class="drop-down">
-        <a href="#">+</a>
-        <a href="#">-</a>
-        <a href="#">Đánh dấu có vấn đề</a>
-    </div>
-    <div class="cost">
-        <p>112.000 vnd</p>
-        <p>Còn lại:16 thùng</p>
-    </div>
-</div>
-<div class="collections">
-    <img src="/Manager/picture/suachua3.jpg" alt="">
-    <button>Chức năng</button>
-    <div class="drop-down">
-        <a href="#">+</a>
-        <a href="#">-</a>
-        <a href="#">Đánh dấu có vấn đề</a>
-    </div>
-    <div class="cost">
-        <p>112.000 vnd</p>
-        <p>Còn lại:16 thùng</p>
-    </div>
-</div>
-<div class="collections">
-    <img src="/Manager/picture/suachua4.jpg" alt="">
-    <button>Chức năng</button>
-    <div class="drop-down">
-        <a href="#">+</a>
-        <a href="#">-</a>
-        <a href="#">Đánh dấu có vấn đề</a>
-    </div>
-    <div class="cost">
-        <p>112.000 vnd</p>
-        <p>Còn lại:16 thùng</p>
-    </div>
-</div>
-</div>
+
 <h2>Gian hàng đặc biệt:</h2>
 <div class="milk-store store-dac-biet">   
-    <!-- Hàng 4 kem sua -->
     <div class="collections">
-    <img src="/Manager/picture/matna1.jpg" alt="">
-    <button>Chức năng</button>
-    <div class="drop-down">
-        <a href="#">+</a>
-        <a href="#">-</a>
-        <a href="#">Đánh dấu có vấn đề</a>
+        <img src="picture/matna1.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
     </div>
-    <div class="cost">
-        <p>112.000 vnd</p>
-        <p>Còn lại:16 thùng</p>
+    <div class="collections">
+        <img src="picture/matna2.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
     </div>
-</div>
-<div class="collections">
-    <img src="/Manager/picture/matna2.jpg" alt="">
-    <button>Chức năng</button>
-    <div class="drop-down">
-        <a href="#">+</a>
-        <a href="#">-</a>
-        <a href="#">Đánh dấu có vấn đề</a>
+    <div class="collections">
+        <img src="picture/matna3.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
     </div>
-    <div class="cost">
-        <p>112.000 vnd</p>
-        <p>Còn lại:16 thùng</p>
+    <div class="collections">
+        <img src="picture/matna4.jpg" alt="">
+        <button>Chức năng</button>
+        <div class="drop-down">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#">Đánh dấu có vấn đề</a>
+        </div>
+        <div class="cost">
+            <p>112.000 vnd</p>
+            <p>Còn lại:16 thùng</p>
+        </div>
     </div>
-</div>
-<div class="collections">
-    <img src="/Manager/picture/matna3.jpg" alt="">
-    <button>Chức năng</button>
-    <div class="drop-down">
-        <a href="#">+</a>
-        <a href="#">-</a>
-        <a href="#">Đánh dấu có vấn đề</a>
-    </div>
-    <div class="cost">
-        <p>112.000 vnd</p>
-        <p>Còn lại:16 thùng</p>
-    </div>
-</div>
-<div class="collections">
-    <img src="/Manager/picture/matna4.jpg" alt="">
-    <button>Chức năng</button>
-    <div class="drop-down">
-        <a href="#">+</a>
-        <a href="#">-</a>
-        <a href="#">Đánh dấu có vấn đề</a>
-    </div>
-    <div class="cost">
-        <p>112.000 vnd</p>
-        <p>Còn lại:16 thùng</p>
-    </div>
-</div>
 </div>
 <!-- Nút thêm hàng -->
 <button id="addItemBtn" class="add-item-button">+</button>

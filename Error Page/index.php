@@ -25,7 +25,7 @@
 		Bạn đang gặp lỗi do tác vụ hoặc trong quá trình đăng nhập,vui lòng kiểm tra lại
 		</h3>
 		
-		<p>the page you are looking for not avaible!</p>
+		<p>Trang đăng nhập không khả dụng,liên hệ với quản trị viên hoặc thử lại</p>
 		
 		<a href="/login/index.html" class="link_404">Go to login Page</a>
 	</div>

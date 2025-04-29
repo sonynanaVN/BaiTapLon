@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Manager/manager.css">
+    <link rel="stylesheet" href="manager.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Dashboard</title>
@@ -13,7 +13,7 @@
     <div class="sidebar">
         <h2>Quản lý</h2>
         <ul>
-            <li><a href="/Manager/manager.html"><i class="fas fa-home"></i> Doanh thu</a></li>
+            <li><a href="http://localhost/Animated%20Login%20Page/Manager/manager.php"><i class="fas fa-home"></i> Doanh thu</a></li>
             <li>
                 <a href=""><i class="fas fa-user-cog"></i> Trình quản lý </a>
                 <ul class="submenu">
@@ -27,7 +27,7 @@
                     <li><a href="/Manager/thanhtoánhoàntiền.html">💳 Thanh toán & Hoàn tiền </a></li>
                 </ul></li>
             <li><a href="#"><i class="fas fa-box"></i> Kho hàng</a><ul class="submenu">
-                <li><a href="/Manager/Kho.html">📊 Tồn kho & Nhập xuất hàng</a></li>
+                <li><a href="http://localhost/Animated%20Login%20Page/Manager/Kho.php">📊 Tồn kho & Nhập xuất hàng</a></li>
                 <li><a href="/Manager/Quảnlýnhàcungcấp.html">🚚 Quản lý nhà cung cấp</a></li>
             </ul></li>
             <li><a href="#"><i class="fas fa-users"></i> Người dùng</a><ul class="submenu">
@@ -37,7 +37,7 @@
                 <li><a href="/Manager/setting.html">⚙️ Cài đặt chung</a></li>
                 <li><a href="/Manager/Chínhsáchvàbảomật.html">🔒Chính sách bảo mật & Quyền riêng tư</a></li>
             </ul></li>
-            <li id="logout"><a href="/login/index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            <li id="logout"><a href="http://localhost/Animated%20Login%20Page/login/test.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
         </ul>
     </div>
 
@@ -92,6 +92,6 @@
         <canvas id="salesChart" width="400px" height="200px"></canvas>
     </div>
 
-    <script src="/Manager/manager.js"></script>
+    <script src="manager.js"></script>
 </body>
 </html>
