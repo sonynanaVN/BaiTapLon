@@ -63,7 +63,7 @@ if (isset($_POST['login_user'])) {
     if ($result->num_rows === 1) {
         $_SESSION['user'] = $result->fetch_assoc();
         $_SESSION['login_fail_count'] = 0;
-        header("Location: http://localhost/Animated%20Login%20Page/main/Main.php");
+        header("Location: http://localhost/Animated%20Login%20Page/main/MainGuess.php");
         exit();
     } else {
         $_SESSION['login_fail_count']++;
@@ -103,6 +103,18 @@ if (isset($_POST['login_admin'])) {
         <?= htmlspecialchars($_GET['msg']) ?>
     </div>
 <?php endif; ?>
+<!-- // khách tự do -->
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['login_guest'])) {
+        // Điều hướng tới trang chính của khách
+        header("Location: guest-home.php");
+        exit();
+    }
+
+    // ... Các xử lý cho người dùng và admin ...
+}
+?>
 
 <!DOCTYPE html>
 <html lang="vi">
@@ -155,12 +167,13 @@ if (isset($_POST['login_admin'])) {
             <input type="password" name="login_password" placeholder="Mật khẩu" required>
 
             <div class="login-buttons">
-                <button name="login_user">Người dùng</button>
-                <button type="submit" name="login_admin">Đăng nhập admin</button>
+                <button name="login_user">Đăng nhập người dùng</button><br>
+                <button type="submit" name="login_admin">Đăng nhập admin</button><br>
+                
             </div>
             <div class="extra-options">
-            <a href="http://localhost/Animated%20Login%20Page/login/forgot-password.php" class="link">Quên mật khẩu?</a>
-            
+            <a href="http://localhost/Animated%20Login%20Page/login/forgot-password.php" class="link">Quên mật khẩu?</a><br>
+            <a href="http://localhost/Animated%20Login%20Page/main/Main.php" class="link">Đăng nhập với tư cách khách tự do</a>
         </div>
         </form>
     </div>

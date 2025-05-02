@@ -305,7 +305,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="chat-content">
             <p>Chào bạn! Bạn cần giúp gì?</p>
         </div>
-        <input type="text" class="chat-input" placeholder="Nhập tin nhắn...">
+        <input type="text" class="chat-input" placeholder="Tính năng chưa khả dụng,vui lòng đăng nhập" readonly>
     </div>
 
     <script src="Main.js"></script>
