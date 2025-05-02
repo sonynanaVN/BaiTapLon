@@ -280,21 +280,43 @@ document.getElementById(`item-total-${index}`).textContent = itemTotal.toLocaleS
 }
 
 
-    function updateTotalPrice() {
-        let total = 0;
-        cart.forEach(item => {
-            total += item.price * item.quantity;
-        });
-        document.getElementById('total-price').textContent = total.toLocaleString('vi-VN') + 'đ';
-        document.getElementById('cart-count').textContent = cart.length;
-        if (cart.length === 0) {
-            document.querySelector('main').innerHTML = `
-                <div class="empty-cart">
-                    <p>Giỏ hàng trống.</p>
-                </div>
-            `;
-        }
+function updateTotalPrice() {
+    let total = 0;
+    cart.forEach(item => {
+        let qty = parseInt(item.quantity);
+        if (isNaN(qty) || qty < 1) qty = 1;
+        total += item.price * qty;
+    });
+    document.getElementById('total-price').textContent = 'Tổng tiền: ' + total.toLocaleString('vi-VN') + 'đ';
+    document.getElementById('cart-count').textContent = cart.length;
+    if (cart.length === 0) {
+        document.querySelector('main').innerHTML = `
+            <div class="empty-cart">
+                <p>Giỏ hàng trống.</p>
+            </div>
+        `;
     }
+}
+
+cart.forEach((item, index) => {
+    let qty = parseInt(item.quantity);
+    if (isNaN(qty) || qty < 1) qty = 1;
+    ul.innerHTML += `
+        <li>
+            <img src="${item.image}" alt="${item.name}">
+            <span>${item.name}</span>
+            <span>
+                <div class="quantity-controls">
+                    <button onclick="updateQuantity(${index}, -1)">-</button>
+                    <span id="quantity-${index}">${qty}</span>
+                    <button onclick="updateQuantity(${index}, 1)">+</button>
+                </div>
+            </span>
+            <span id="item-total-${index}">${(item.price * qty).toLocaleString('vi-VN')}đ</span>
+            <button class="delete-button" onclick="removeItem(${index})">Xoá</button>
+        </li>
+    `;
+});
 
 
     function renderCart() {

@@ -36,10 +36,10 @@ if (isset($_SESSION['user'])) {
     </div>';
 } else {
     echo '
-    <div class="login" onclick="window.location.href=\'login_page.html\'">
+    <div class="login" onclick="window.location.href=\'login\test.php\'">
         <span>Đăng nhập/ Đăng ký</span>
         <div class="login-detail" id="loginDetail">
-            <button onclick="window.location.href=\'account_page.html\'">Tài khoản</button>
+            <button onclick="window.location.href=\'login\test.php\'">Tài khoản</button>
         </div>
     </div>';
 }
