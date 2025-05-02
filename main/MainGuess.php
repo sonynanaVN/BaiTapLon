@@ -300,12 +300,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="chat-box" id="chatBox">
         <div class="chat-header">
             <span>Chat Box</span>
-            <button id="closeChat">X</button>
+            <button id="closeChat" style="width:30px;">X</button>
         </div>
-        <div class="chat-content">
+        <div class="chat-content" style="height: 100px;">
             <p>Chào bạn! Bạn cần giúp gì?</p>
         </div>
-        <input type="text" class="chat-input" placeholder="Tính năng chưa khả dụng,vui lòng đăng nhập" readonly>
+        <form action="message.php" method="POST">
+        <input type="text" name="message" placeholder="Nhập tin nhắn..." required style="margin-left:10px;">
+        <button type="submit" style="width:30px;">Gửi</button>
+    </form>
     </div>
 
     <script src="Main.js"></script>

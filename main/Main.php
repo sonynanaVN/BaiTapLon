@@ -315,12 +315,10 @@ if (isset($_SESSION['user'])) {
             <p>Chào bạn! Bạn cần giúp gì?</p>
         </div>
         <form action="message.php" method="POST">
-        <input type="text" name="message" placeholder="Nhập tin nhắn..." required style="margin-left:10px;">
+        <input type="text" name="message" placeholder="Tính năng chưa khả dụng,vui lòng đăng nhập" required style="margin-left:10px;" readonly>
         <button type="submit" style="width:30px;">Gửi</button>
     </form>
     </div>
-
-    
     <script src="Main.js"></script>
 </div>
 </body>
