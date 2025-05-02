@@ -96,25 +96,25 @@ body {
     float: left;
     left: 0;
     position: relative;
-    width: 350px; /* Chiều rộng cố định cho search */
+    width: 350px; 
 }
 
 .search-bar {
     position: absolute;
-    top: 50%; /* Căn giữa theo chiều dọc */
-    left: 0px; /* Đưa thanh tìm kiếm vào gần bên trái */
-    margin-left: 30px; /* Khoảng cách từ bên trái */
+    top: 50%; 
+    left: 0px;
+    margin-left: 30px; 
     padding: 10px;
     border-radius: 5px;
-    width: calc(100% - 30px); /* Chiều rộng của thanh tìm kiếm chiếm toàn bộ không gian còn lại */
+    width: calc(100% - 30px); 
     border-color: #555;
-    transform: translateY(-50%); /* Căn giữa theo chiều dọc */
+    transform: translateY(-50%); 
 }
 
 
 /* Logo */
 .logo img {
-    width: 80px; /* Kích thước phù hợp */
+    width: 80px;
     height: 80px;
     margin-left:0
 }

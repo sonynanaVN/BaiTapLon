@@ -109,7 +109,36 @@
             <li id="logout"><a href="http://localhost/Animated%20Login%20Page/login/test.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
         </ul>
     </div>
+    
     <div class="main-content">
+        <div class="header">
+            <div class="search">
+                <input type="text" class="search-bar" placeholder="Tìm kiếm...">
+            </div>
+            <div class="bingbong">
+                <div class="notification-icon">🔔</div>
+                <div class="notifications">
+                    <p>🛒 Khách hàng A vừa mua 2 sản phẩm</p>
+                    <p>🛍️ Khách hàng B đã hoàn thành đơn hàng</p>
+                    <p>💳 Khách hàng C vừa thanh toán đơn hàng</p>
+                    <p>📦 Khách hàng D đã nhận hàng</p>
+                    <p>🔄 Khách hàng E yêu cầu đổi hàng</p>
+                    <p>📢 Khách hàng F để lại đánh giá 5 sao</p>
+                    <p>🎉 Khách hàng G đăng ký thành viên VIP</p>
+                </div>
+            </div>
+            <div class="avatar">
+                <img src="OIP.jpg" alt="Avatar">
+                <div class="dropdown">
+                    <p>Thông tin tài khoản</p>
+                    <p>Ghi chú</p>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="Logo_DutchLady.jpg" alt="Logo">
+            </div>
+        </div>
+        
         <nav>
             <h2>Nhà Cung Cấp</h2>
         </nav>

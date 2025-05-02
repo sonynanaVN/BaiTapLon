@@ -61,14 +61,14 @@
                 </div>
             </div>
             <div class="avatar">
-                <img src="/login/OIP.jpg" alt="Avatar">
+                <img src="OIP.jpg" alt="Avatar">
                 <div class="dropdown">
                     <p>Thông tin tài khoản</p>
                     <p>Ghi chú</p>
                 </div>
             </div>
             <div class="logo">
-                <img src="/main/Logo_DutchLady_1.png" alt="Logo">
+                <img src="Logo_DutchLady.jpg" alt="Logo">
             </div>
         </div>
       

@@ -31,7 +31,7 @@
                 <li><a href="http://localhost/Animated%20Login%20Page/Manager/Qu%e1%ba%a3nl%c3%bdnh%c3%a0cungc%e1%ba%a5p.php">🚚 Quản lý nhà cung cấp</a></li>
             </ul></li>
             <li><a href="#"><i class="fas fa-users"></i> Người dùng</a><ul class="submenu">
-                <li><a href="/Manager/User.html">💬 Hỗ trợ khách hàng</a></li>
+                <li><a href="http://localhost/Animated%20Login%20Page/Manager/messenger/H%e1%bb%97tr%e1%bb%a3kh%c3%a1chh%c3%a0ng.php">💬 Hỗ trợ khách hàng</a></li>
             </ul></li>
             <li><a href="#"><i class="fas fa-cogs"></i> Cài đặt</a><ul class="submenu">
                 <li><a href="http://localhost/Animated%20Login%20Page/Manager/setting.php">⚙️ Cài đặt chung</a></li>
@@ -60,14 +60,14 @@
                 </div>
             </div>
             <div class="avatar">
-                <img src="/login/OIP.jpg" alt="Avatar">
+                <img src="OIP.jpg" alt="Avatar">
                 <div class="dropdown">
                     <p>Thông tin tài khoản</p>
                     <p>Ghi chú</p>
                 </div>
             </div>
             <div class="logo">
-                <img src="/main/Logo_DutchLady_1.png" alt="Logo">
+                <img src="Logo_DutchLady.jpg" alt="Logo">
             </div>
         </div>
         

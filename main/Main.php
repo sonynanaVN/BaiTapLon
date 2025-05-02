@@ -23,7 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 <?php
-session_start(); // Bắt đầu session nếu chưa có
 
 if (isset($_SESSION['user'])) {
     $userEmail = $_SESSION['user']['email'];
@@ -50,7 +49,7 @@ if (isset($_SESSION['user'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Main.css">
+    <link rel="stylesheet" href="Main1.css">
     <title>DutchLady</title>
 </head>
 <body>
@@ -65,7 +64,7 @@ if (isset($_SESSION['user'])) {
             <a href="https://www.dutchlady.com.vn/index.php/contact">Liên hệ</a>
         </nav>
         <div class="user-actions">
-        <div class="login" onclick="window.location.href='login_page.html'">
+        <div class="login" onclick="window.location.href='/login/test.php'">
     <span>Đăng nhập/ Đăng ký</span>
     <div class="login-detail" id="loginDetail">
         <button onclick="window.location.href='account_page.html'">Tài khoản</button>
@@ -310,12 +309,15 @@ if (isset($_SESSION['user'])) {
     <div class="chat-box" id="chatBox">
         <div class="chat-header">
             <span>Chat Box</span>
-            <button id="closeChat">X</button>
+            <button id="closeChat" style="width:30px;">X</button>
         </div>
-        <div class="chat-content">
+        <div class="chat-content" style="height: 100px;">
             <p>Chào bạn! Bạn cần giúp gì?</p>
         </div>
-        <input type="text" class="chat-input" placeholder="Nhập tin nhắn...">
+        <form action="message.php" method="POST">
+        <input type="text" name="message" placeholder="Nhập tin nhắn..." required style="margin-left:10px;">
+        <button type="submit" style="width:30px;">Gửi</button>
+    </form>
     </div>
 
     
