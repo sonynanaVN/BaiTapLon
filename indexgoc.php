@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
         $sql = "INSERT INTO accounts (name, email, password) VALUES ('$name', '$email', '$password')";
         if (mysqli_query($conn, $sql)) {
             $_SESSION['user'] = $email;
-            header("Location: main/Main.php");
+            header("Location: main/Main.php". urlencode("Đăng ký thành công! Đăng nhập để tiếp tục."));
             exit();
         } else {
             $error = "Lỗi đăng ký: " . mysqli_error($conn);

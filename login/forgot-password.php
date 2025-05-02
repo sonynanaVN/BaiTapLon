@@ -17,7 +17,7 @@
                 <p>Enter your email address and we will send you a reset link.</p>
                 <input type="email" id="email" placeholder="Enter your email" required>
                 <button type="submit">Send Reset Link</button>
-                <a href="index.html">Back to Login</a>
+                <a href="http://localhost/Animated%20Login%20Page/login/test.php">Back to Login</a>
             </form>
         </div>
     </div>

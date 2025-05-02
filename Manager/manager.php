@@ -17,13 +17,13 @@
             <li>
                 <a href=""><i class="fas fa-user-cog"></i> Trình quản lý </a>
                 <ul class="submenu">
-                    <li><a href="/Manager/Quảnlýngườidùng.html">📂 Quản lý tài khoản</a></li>
-                    <li><a href="/Manager/Phânquyềnngườidùng.html">📋 Phân quyền người dùng</a></li>
+                    <li><a href="http://localhost/Animated%20Login%20Page/Manager/user/Users.php">📂 Quản lý tài khoản</a></li>
+                    <li><a href="http://localhost/Animated%20Login%20Page/Manager/Qu%e1%ba%a3nl%c3%bd%c4%91%c6%a1nh%c3%a0ng.php">📋 Trình thêm sản phẩm</a></li>
                 </ul>
             </li>
             <li><a href="#"><i class="fas fa-file-invoice"></i> Đơn thanh toán</a>
                 <ul class="submenu">
-                    <li><a href="/Manager/Quảnlýđơnhàng.html">🛒 Quản lý đơn hàng</a></li>
+                    <li><a href="http://localhost/Animated%20Login%20Page/Manager/Qu%e1%ba%a3nl%c3%bd%c4%91%c6%a1nh%c3%a0ng.php">🛒 Quản lý đơn hàng</a></li>
                     <li><a href="/Manager/thanhtoánhoàntiền.html">💳 Thanh toán & Hoàn tiền </a></li>
                 </ul></li>
             <li><a href="#"><i class="fas fa-box"></i> Kho hàng</a><ul class="submenu">
