@@ -1,5 +1,16 @@
 <?php
 session_start();
+$servername = "localhost";
+$username = "root";
+$password = ""; // thay đổi nếu bạn có mật khẩu
+$dbname = "shop"; // thay bằng tên database trong file `products.sql`
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+mysqli_set_charset($conn, "utf8");
+
+if ($conn->connect_error) {
+    die("Kết nối thất bại: " . $conn->connect_error);
+}
 
 // Initialize the cart if it doesn't exist
 if (!isset($_SESSION['cart'])) {
@@ -64,7 +75,7 @@ if (isset($_SESSION['user'])) {
             <a href="https://www.dutchlady.com.vn/index.php/contact">Liên hệ</a>
         </nav>
         <div class="user-actions">
-        <div class="login" onclick="window.location.href='/login/test.php'">
+        <div class="login" onclick="window.location.href='../login/test.php'">
     <span>Đăng nhập/ Đăng ký</span>
     <div class="login-detail" id="loginDetail">
         <button onclick="window.location.href='account_page.html'">Tài khoản</button>
@@ -75,7 +86,7 @@ if (isset($_SESSION['user'])) {
                 <div class="cart-detail" id="cartDetail">
                     <p>Chưa có sản phẩm nào</p>
                     <p>Tổng: 0đ</p>
-                    <button onclick="window.location.href='â.php'">Thanh toán</button>
+                    <button onclick="window.location.href='giohang.php'">Thanh toán</button>
                 </div>
             </div>
         </div>
@@ -247,6 +258,26 @@ if (isset($_SESSION['user'])) {
                 <button onclick="addToCart()">Đặt món</button>
             </div>
         </div>
+        <div class="products"></div>
+        <?php
+$sql = "SELECT * FROM products";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo '<div class="product-list">';
+    while ($row = $result->fetch_assoc()) {
+        echo "<div class='product'>";
+        echo "<img src='{$row['image']}' alt='Sản phẩm'><br>";
+        echo "<strong>{$row['name']}</strong><br>";
+        echo "" . number_format($row['price'], 0, ',', '.') . " đ<br>";
+        echo "<button>Đặt món</button>";
+        echo "</div>";
+    }
+    echo '</div>';
+} else {
+    echo 'Không có sản phẩm nào.';
+}
+?>
 
         <div class="section-container">
             <div class="section">
@@ -315,7 +346,7 @@ if (isset($_SESSION['user'])) {
             <p>Chào bạn! Bạn cần giúp gì?</p>
         </div>
         <form action="message.php" method="POST">
-        <input type="text" name="message" placeholder="Tính năng chưa khả dụng,vui lòng đăng nhập" required style="margin-left:10px;" readonly>
+        <input type="text" name="message" placeholder="Tính năng chưa khả dụng,vui lòng đăng nhập" required style="margin-left:10px;width:250px;" readonly>
         <button type="submit" style="width:30px;">Gửi</button>
     </form>
     </div>

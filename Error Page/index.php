@@ -27,7 +27,7 @@
 		
 		<p>Trang đăng nhập không khả dụng,liên hệ với quản trị viên hoặc thử lại</p>
 		
-		<a href="/login/index.html" class="link_404">Go to login Page</a>
+		<a href="http://localhost/Animated%20Login%20Page/login/test.php" class="link_404">Go to login Page</a>
 	</div>
 		</div>
 		</div>

@@ -1,5 +1,42 @@
 <?php
+// Kết nối CSDL
+$host = 'localhost';
+$db = 'shop';
+$user = 'root';
+$pass = '';
+$conn = new mysqli($host, $user, $pass, $db);
+
+// Kiểm tra kết nối
+if ($conn->connect_error) {
+    die("Kết nối thất bại: " . $conn->connect_error);
+}
+
+// Lấy danh sách sản phẩm
+$sql = "SELECT * FROM products ORDER BY id DESC";
+$result = $conn->query($sql);
+?>
+<?php
 session_start();
+$host = 'localhost';
+$db = 'users';
+$user = 'root'; 
+$pass = '';   
+$conn = new mysqli($host, $user, $pass, $db);
+
+$tenNguoiDung = "Khách";
+
+if (isset($_SESSION['user_id'])) {
+    $userId = $_SESSION['user_id'];
+    $sql = "SELECT name FROM accounts WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $userId);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($row = $result->fetch_assoc()) {
+        $tenNguoiDung = $row['name'];
+    }
+}
 
 // Khởi tạo giỏ hàng nếu chưa tồn tại
 if (!isset($_SESSION['cart'])) {
@@ -41,37 +78,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <a href="https://www.dutchlady.com.vn/index.php/contact">Liên hệ</a>
             </nav>
             <div class="user-actions">
-                <div class="guess" onmouseover="showGuessDetail()" onmouseout="hideGuessDetail()">
-                    <span><img src="img/logo.png">Hello, Guess</span>
-                    <div class="guess-detail" id="guessDetail">
-                        <button>Thông tin</button>
-                        <button>Đăng xuất</button>
-                    </div>
-                </div>
-                <div class="cart" onmouseover="showCartDetail()" onmouseout="hideCartDetail()">
-                    <span><img src="img/GioHang.png" alt="Giỏ hàng">Giỏ hàng</span>
-                    <div class="cart-detail" id="cartDetail">
-                        <?php
-                        if (!empty($_SESSION['cart'])) {
-                            $totalPrice = 0;
-                            foreach ($_SESSION['cart'] as $item) {
-                                $totalPrice += $item['price'];
-                                echo "<p>{$item['name']}: " . number_format($item['price'], 0, ',', '.') . "đ</p>";
-                            }
-                            echo "<p>Tổng: " . number_format($totalPrice, 0, ',', '.') . "đ</p>";
-                        } else {
-                            echo "<p>Chưa có sản phẩm nào</p>";
-                        }
-                        ?>
-                        <form action="â.php" method="POST">
-                            <input type="hidden" name="cart" value='<?php echo json_encode($_SESSION['cart']); ?>'>
-                            <input type="hidden" name="totalPrice" value="<?php echo $totalPrice ?? 0; ?>">
-                            <button type="submit">Thanh toán</button>
-                        </form>
-                    </div>
+    <div class="guess" onmouseover="showGuessDetail()" onmouseout="hideGuessDetail()">
+        <span><img src="img/logo.png">Xin chào, <?php echo htmlspecialchars($tenNguoiDung); ?></span>
+        <div class="guess-detail" id="guessDetail">
+            <a href="http://localhost/Animated%20Login%20Page/login/test.php">Đăng xuất</a>
+        </div>
+    </div>
+</div>
+<div class="cart" onmouseover="showCartDetail()" onmouseout="hideCartDetail()">
+                <span><img src="img/GioHang.png" alt="Giỏ hàng">Giỏ hàng</span>
+                <div class="cart-detail" id="cartDetail">
+                    <p>Chưa có sản phẩm nào</p>
+                    <p>Tổng: 0đ</p>
+                    <button onclick="window.location.href='giohang.php'">Thanh toán</button>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
     <poster>
         <img src="img/DucthLady_1.jpg" alt="Poster">
@@ -238,7 +261,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </div>
         </main>
-
+    <div class="products">
+        <?php
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo "<div class='product'>";
+            echo "<img src='{$row['image']}' alt='Sản phẩm'><br>";
+            echo "<strong>{$row['name']}</strong><br>";
+            echo "" . number_format($row['price'], 0, ',', '.') . " đ<br>";
+            echo "<button>Đặt món</button>";
+            echo "</div>";
+        }
+    } else {
+        echo "<p></p>";
+    }
+    $conn->close();
+    ?>
+     </div>
         <footer>
             <div class="section-container">
                 <div class="section">

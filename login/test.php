@@ -48,6 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
 
 // Xử lý đăng nhập
 // Đăng nhập người dùng thường
+session_start(); // Bắt buộc phải có
+
 if (isset($_POST['login_user'])) {
     $email    = $_POST['login_email'];
     $password = $_POST['login_password'];
@@ -61,7 +63,9 @@ if (isset($_POST['login_user'])) {
     $result = $conn->query($sql);
 
     if ($result->num_rows === 1) {
-        $_SESSION['user'] = $result->fetch_assoc();
+        $row = $result->fetch_assoc();
+        $_SESSION['user'] = $row;
+        $_SESSION['user_id'] = $row['id'];
         $_SESSION['login_fail_count'] = 0;
         header("Location: http://localhost/Animated%20Login%20Page/main/MainGuess.php");
         exit();
@@ -76,9 +80,6 @@ if (isset($_POST['login_user'])) {
         }
     }
 }
-
-
-session_start();
 
 if (isset($_POST['login_admin'])) {
     $admin_email = "admin@gmail.com";
@@ -112,7 +113,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
-    // ... Các xử lý cho người dùng và admin ...
 }
 ?>
 

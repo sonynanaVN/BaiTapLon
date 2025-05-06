@@ -27,15 +27,15 @@
             text-align: left;
             border-bottom: 1px solid #ddd;
         }
-        .status.active {
-            color: green;
-            font-weight: bold;
+        .status.hoptac {
+            color: white;
+            background-color: green;
         }
-        .status.inactive {
-            color: red;
-            font-weight: bold;
-        }
-        .status.pending{
+
+        .status.tamngung {
+            color: white;
+            background-color: orange;
+        } .status.pending{
             color: rgb(242, 242, 70);
             font-weight: bold;
         }
@@ -100,7 +100,7 @@
                 <li><a href="http://localhost/Animated%20Login%20Page/Manager/Qu%e1%ba%a3nl%c3%bdnh%c3%a0cungc%e1%ba%a5p.php">🚚 Quản lý nhà cung cấp</a></li>
             </ul></li>
             <li><a href="#"><i class="fas fa-users"></i> Người dùng</a><ul class="submenu">
-                <li><a href="/Manager/User.html">💬 Hỗ trợ khách hàng</a></li>
+                <li><a href="http://localhost/Animated%20Login%20Page/Manager/messenger/H%e1%bb%97tr%e1%bb%a3kh%c3%a1chh%c3%a0ng.php">💬 Hỗ trợ khách hàng</a></li>
             </ul></li>
             <li><a href="#"><i class="fas fa-cogs"></i> Cài đặt</a><ul class="submenu">
                 <li><a href="http://localhost/Animated%20Login%20Page/Manager/setting.php">⚙️ Cài đặt chung</a></li>
@@ -160,30 +160,14 @@
                         <td>10.000.000₫</td>
                         <td><span class="status active">Hợp tác</span></td>
                         <td>
-                            <div class="action-btn">
-                                <button>Chỉnh sửa</button>
-                                <div class="dropdown-menu">
-                                    <a href="#">📦 Xem đơn hàng</a><br>
-                                    <a href="#">💰 Thanh toán</a><br>
-                                    <a href="#">🚫 Ngừng hợp tác</a>
-                                </div>
+                        <div class="action-btn">
+                            <button>Hành động</button>
+                            <div class="dropdown-menu">
+                                <a class="btn-hoptac">✅ Hợp tác</a>
+                                <a class="btn-tamngung">⏸️ Tạm ngưng</a>
+                                <a class="btn-ngung">🚫 Ngừng hợp tác</a>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2002</td>
-                        <td>Công ty XYZ</td>
-                        <td>7.500.000₫</td>
-                        <td><span class="status inactive">Tạm ngừng</span></td>
-                        <td>
-                            <div class="action-btn">
-                                <button>Chỉnh sửa</button>
-                                <div class="dropdown-menu">
-                                    <a href="#">📦 Xem đơn hàng</a><br>
-                                    <a href="#">💰 Thanh toán</a><br>
-                                    <a href="#">🚫 Ngừng hợp tác</a>
-                                </div>
-                            </div>
+                        </div>
                         </td>
                     </tr>
                     <tr>
@@ -192,14 +176,14 @@
                         <td>10.000.000₫</td>
                         <td><span class="status active">Hợp tác</span></td>
                         <td>
-                            <div class="action-btn">
-                                <button>Chỉnh sửa</button>
-                                <div class="dropdown-menu">
-                                    <a href="#">📦 Xem đơn hàng</a><br>
-                                    <a href="#">💰 Thanh toán</a><br>
-                                    <a href="#">🚫 Ngừng hợp tác</a>
-                                </div>
+                        <div class="action-btn">
+                            <button>Hành động</button>
+                            <div class="dropdown-menu">
+                                <a class="btn-hoptac">✅ Hợp tác</a>
+                                <a class="btn-tamngung">⏸️ Tạm ngưng</a>
+                                <a class="btn-ngung">🚫 Ngừng hợp tác</a>
                             </div>
+                        </div>
                         </td>
                     </tr>
                     <tr>
@@ -208,14 +192,14 @@
                         <td>10.000.000₫</td>
                         <td><span class="status active">Hợp tác</span></td>
                         <td>
-                            <div class="action-btn">
-                                <button>Chỉnh sửa</button>
-                                <div class="dropdown-menu">
-                                    <a href="#">📦 Xem đơn hàng</a><br>
-                                    <a href="#">💰 Thanh toán</a><br>
-                                    <a href="#">🚫 Ngừng hợp tác</a>
-                                </div>
+                        <div class="action-btn">
+                            <button>Hành động</button>
+                            <div class="dropdown-menu">
+                                <a class="btn-hoptac">✅ Hợp tác</a>
+                                <a class="btn-tamngung">⏸️ Tạm ngưng</a>
+                                <a class="btn-ngung">🚫 Ngừng hợp tác</a>
                             </div>
+                        </div>
                         </td>
                     </tr>
                     <tr>
@@ -224,19 +208,82 @@
                         <td>10.000.000₫</td>
                         <td><span class="status active">Hợp tác</span></td>
                         <td>
-                            <div class="action-btn">
-                                <button>Chỉnh sửa</button>
-                                <div class="dropdown-menu">
-                                    <a href="#">📦 Xem đơn hàng</a><br>
-                                    <a href="#">💰 Thanh toán</a><br>
-                                    <a href="#">🚫 Ngừng hợp tác</a>
-                                </div>
+                        <div class="action-btn">
+                            <button>Hành động</button>
+                            <div class="dropdown-menu">
+                                <a class="btn-hoptac">✅ Hợp tác</a>
+                                <a class="btn-tamngung">⏸️ Tạm ngưng</a>
+                                <a class="btn-ngung">🚫 Ngừng hợp tác</a>
                             </div>
+                        </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2001</td>
+                        <td>Công ty ABC</td>
+                        <td>10.000.000₫</td>
+                        <td><span class="status active">Hợp tác</span></td>
+                        <td>
+                        <div class="action-btn">
+                            <button>Hành động</button>
+                            <div class="dropdown-menu">
+                                <a class="btn-hoptac">✅ Hợp tác</a>
+                                <a class="btn-tamngung">⏸️ Tạm ngưng</a>
+                                <a class="btn-ngung">🚫 Ngừng hợp tác</a>
+                            </div>
+                        </div>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </main>
     </div>
+    <script>
+        // Dropdown toggle
+        document.querySelectorAll('.action-btn button').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const parent = this.parentElement;
+                parent.classList.toggle('open');
+            });
+        });
+
+        // Đóng dropdown nếu click ra ngoài
+        window.addEventListener('click', function (e) {
+            document.querySelectorAll('.action-btn').forEach(item => {
+                if (!item.contains(e.target)) {
+                    item.classList.remove('open');
+                }
+            });
+        });
+
+        // Xử lý nút "Hợp tác"
+        document.querySelectorAll('.btn-hoptac').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const status = this.closest('tr').querySelector('.status');
+                status.innerText = 'Hợp tác';
+                status.className = 'status hoptac';
+            });
+        });
+
+        // Xử lý nút "Tạm ngưng"
+        document.querySelectorAll('.btn-tamngung').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const status = this.closest('tr').querySelector('.status');
+                status.innerText = 'Tạm ngưng';
+                status.className = 'status tamngung';
+            });
+        });
+
+        // Xử lý nút "Ngừng hợp tác"
+        document.querySelectorAll('.btn-ngung').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const row = this.closest('tr');
+                const name = row.children[1].innerText;
+                if (confirm(`Bạn có chắc chắn muốn ngừng hợp tác với "${name}" không?`)) {
+                    row.remove();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
