@@ -9,7 +9,7 @@
             line-height: 1.6;
             margin: 40px;
             background-color: #c9d6ff;
-            background-image: url(countryside_paddy_fields_4k.jpg);
+            background-image: url(BannerMilk.jpg);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;

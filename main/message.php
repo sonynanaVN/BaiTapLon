@@ -1,14 +1,9 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "chat_db";
+require_once("ketnoi.php");
 
 // Nhận dữ liệu POST
 $message = $_POST['message'] ?? '';
 
-// Kết nối MySQL
-$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Kiểm tra kết nối
 if ($conn->connect_error) {

@@ -1,26 +1,15 @@
 <?php
-// session_start();
-
-// $host = "localhost";
-// $user = "root";
-// $pass = ""; // mật khẩu MySQL nếu có
-// $db   = "users";
-
-// $conn = new mysqli($host, $user, $pass, $db);
 require_once("ketnoi.php");
 if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);
 }
-
 $msg = "";
-
-// Xử lý đăng ký
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
-    $name      = trim($_POST['name']);
-    $email     = trim($_POST['email']);
+    $name      = ($_POST['name']);
+    $email     = ($_POST['email']);
     $password  = $_POST['password'];
     $repassword = $_POST['repassword'];
-    $terms     = isset($_POST['terms']); // checkbox
+    $terms     = isset($_POST['terms']);
 
     if (!$terms) {
         $msg = "Bạn phải đồng ý với điều khoản sử dụng.";
@@ -36,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
             $sql = "INSERT INTO accounts (name, email, password) VALUES ('$name', '$email', '$password')";
             if (mysqli_query($conn, $sql)) {
                 $_SESSION['user'] = $email;
-                $msg = "Đăng ký thành công!"; // ⚠️ Không chuyển hướng, hiển thị thông báo
+                $msg = "Đăng ký thành công!";
             } else {
                 $msg = "Lỗi đăng ký: " . mysqli_error($conn);
             }
@@ -46,9 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
 
 
 
-// Xử lý đăng nhập
-// Đăng nhập người dùng thường
-session_start(); // Bắt buộc phải có
+// Login
 
 if (isset($_POST['login_user'])) {
     $email    = $_POST['login_email'];
@@ -121,7 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Đăng nhập & Đăng ký</title>
-    <link rel="stylesheet" href="style1.css"> 
+    <link rel="stylesheet" href="style2.css"> 
     <script>
         function toggleForm() {
             document.querySelector('.container').classList.toggle('active');
@@ -155,10 +142,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
 </div>
 
-
-
-
-        <!-- Đăng nhập -->
 <!-- Đăng nhập -->
     <div class="form-container sign-in">
         <form method="post">
@@ -184,12 +167,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="toggle">
                 <div class="toggle-paner toggle-left">
                     <h2>Xin chào bạn mới!</h2>
-                    <p>Đăng ký để bắt đầu hành trình</p>                               
+                    <p>Đăng ký và bắt đầu hành trình với DutchLady chúng tôi</p>                               
                     <button class="hidden" onclick="toggleForm()">Đăng nhập</button>
                 </div>
                 <div class="toggle-paner toggle-right">
                     <h2>Chào mừng trở lại!</h2>
-                    <p>Đăng nhập để truy cập</p>
+                    <p>Đăng nhập và tiếp tục truy cập thưởng thức các sản phẩm mới</p>
                     <button class="hidden" onclick="toggleForm()">Đăng ký</button>
                 </div>
             </div>

@@ -1,28 +1,13 @@
-<?php
-// Kết nối CSDL
-$host = 'localhost';
-$db = 'shop';
-$user = 'root';
-$pass = '';
-$conn = new mysqli($host, $user, $pass, $db);
 
-// Kiểm tra kết nối
+<?php
+session_start();
+require_once("ketnoi.php");
+
 if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);
 }
-
-// Lấy danh sách sản phẩm
 $sql = "SELECT * FROM products ORDER BY id DESC";
-$result = $conn->query($sql);
-?>
-<?php
-session_start();
-$host = 'localhost';
-$db = 'users';
-$user = 'root'; 
-$pass = '';   
-$conn = new mysqli($host, $user, $pass, $db);
-
+$resultProducts = $conn->query($sql);
 $tenNguoiDung = "Khách";
 
 if (isset($_SESSION['user_id'])) {
@@ -79,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </nav>
             <div class="user-actions">
     <div class="guess" onmouseover="showGuessDetail()" onmouseout="hideGuessDetail()">
-        <span><img src="img/logo.png">Xin chào, <?php echo htmlspecialchars($tenNguoiDung); ?></span>
+        <span><img src="img/logo.png">Xin chào, <?php echo ($tenNguoiDung); ?></span>
         <div class="guess-detail" id="guessDetail">
             <a href="http://localhost/Animated%20Login%20Page/login/test.php">Đăng xuất</a>
         </div>
@@ -97,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </header>
 
     <poster>
-        <img src="img/DucthLady_1.jpg" alt="Poster">
+        <img src="BannerMain.jpg" alt="Poster">
     </poster>
     <div class="slide">
         <img src="img/Pic1.jpg" alt="Pic 1">
@@ -263,8 +248,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </main>
     <div class="products">
         <?php
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
+    if ($resultProducts->num_rows > 0) {
+        while ($row = $resultProducts->fetch_assoc()) {
             echo "<div class='product'>";
             echo "<img src='{$row['image']}' alt='Sản phẩm'><br>";
             echo "<strong>{$row['name']}</strong><br>";

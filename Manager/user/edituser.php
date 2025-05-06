@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "users");
+require_once("ketnoi.php");
 if ($conn->connect_error) {
     die("Lỗi kết nối: " . $conn->connect_error);
 }

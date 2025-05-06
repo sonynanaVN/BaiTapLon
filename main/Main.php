@@ -1,12 +1,6 @@
 <?php
 session_start();
-$servername = "localhost";
-$username = "root";
-$password = ""; // thay đổi nếu bạn có mật khẩu
-$dbname = "shop"; // thay bằng tên database trong file `products.sql`
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-mysqli_set_charset($conn, "utf8");
+require_once("ketnoi.php");
 
 if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);

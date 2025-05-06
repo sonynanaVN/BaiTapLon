@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$conn = new mysqli("localhost", "root", "", "chat_db");
+require_once("ketnoi.php");
 if ($conn->connect_error) {
     die("Lỗi kết nối CSDL: " . $conn->connect_error);
 }

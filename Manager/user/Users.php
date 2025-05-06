@@ -1,13 +1,7 @@
 <?php
 session_start();
 
-// Kiểm tra nếu chưa đăng nhập admin thì chặn
-// if (!isset($_SESSION['admin'])) {
-//     header("Location: login.php");
-//     exit();
-// }
-
-$conn = new mysqli("localhost", "root", "", "users");
+require_once("ketnoi.php");
 if ($conn->connect_error) {
     die("Lỗi kết nối CSDL: " . $conn->connect_error);
 }
@@ -51,7 +45,9 @@ $result = $conn->query($sql);
 </head>
 <body>
     <h2>📋 Danh sách người dùng đã đăng ký</h2>
-
+    <div class="Log-out">
+        <a href="http://localhost/Animated%20Login%20Page/Manager/manager.php">Trở về</a>
+    </div>
     <table>
         <thead>
             <tr>
