@@ -66,7 +66,7 @@ $result = $conn->query($sql);
                     <td><?= ($user['email']) ?></td>
                     <td><?= ($user['password']) ?></td>
                     <td class="actions">
-                        <a href="edituser.php?id=<?= $user['id'] ?>"><button class="edit">Chỉnh sửa</button></a>
+                        <a href="edituser.php?id=<?= $user['id'] ?>"><button class="edit">Cập nhật</button></a>
                         <a href="deleteuser.php?id=<?= $user['id'] ?>" onclick="return confirm('Xoá người dùng này?');">
                             <button class="delete">Xoá</button>
                         </a>

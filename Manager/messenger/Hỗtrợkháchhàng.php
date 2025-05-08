@@ -45,7 +45,7 @@ $result = $conn->query($sql);
 </head>
 <body>
     <h2>📋 Danh sách ý kiến</h2>
-
+        <a href="../manager.php">Trở về</a>
     <table>
         <thead>
             <tr>
@@ -62,8 +62,7 @@ $result = $conn->query($sql);
                     <td><?= ($chat_db['content']) ?></td>
                     <td><?= ($chat_db['created_at']) ?></td>
                     <td class="actions">
-                        <a href="edituser.php?id=<?= $chat_db['id'] ?>"><button class="edit">Chỉnh sửa</button></a>
-                        <a href="deleteuser.php?id=<?= $chat_db['id'] ?>" onclick="return confirm('Xoá người dùng này?');">
+                        <a href="deletechat.php?id=<?= $chat_db['id'] ?>" onclick="return confirm('Xoá tin nhắn người dùng này?');">
                             <button class="delete">Xoá</button>
                         </a>
                     </td>

@@ -1,17 +1,17 @@
 <?php
-    session_start();
-	$id = $_GET["id"];
+	$id = $_GET["khoa"];
 	/*kết nối CSDL*/
 	require_once("ketnoi.php");
 	/*viết câu lệnh sql xóa*/
-	$sql = "delete from accounts where id = $id";
+	$sql = "delete from nhacungcap where id = $id";
 	/*thực thi câu lệnh $sql*/
 	$kq = mysqli_query($conn, $sql);
 	if($kq)
 	{
 		/*đóng kết nối*/
 		mysqli_close($conn);
-		header("location:Users.php");
+		/*quay về trang danhsach.php để hiện thiij ra*/
+		header("location:Hỗtrợkháchhàng.php");
 	}
 	else
 	{

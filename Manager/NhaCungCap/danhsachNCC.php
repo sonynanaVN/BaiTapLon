@@ -1,85 +1,55 @@
-<?php
-require_once("ketnoi.php");
-
-// Xử lý khi submit form
-if (isset($_POST['submit'])) {
-    $name = ($_POST['name']);
-    $price = (float)$_POST['price'];
-    $category = ($_POST['category']);
-    
-    if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
-        $imageTmpPath = $_FILES['image']['tmp_name'];
-        $imageName = uniqid() . '_' . basename($_FILES['image']['name']);
-        $uploadDir = '../main/uploads';
-        $uploadPath = $uploadDir . $imageName;
-
-        if (!is_dir($uploadDir)) {
-            mkdir($uploadDir, 0755, true);
-        }
-
-        if (move_uploaded_file($imageTmpPath, $uploadPath)) {
-            $stmt = $conn->prepare("INSERT INTO products (name, price, category, image) VALUES (?, ?, ?, ?)");
-            $stmt->bind_param("sdss", $name, $price, $category, $uploadPath);
-
-            if ($stmt->execute()) {
-                echo "";
-            } else {
-                echo "<p style='color:red;'>Lỗi khi thêm vào cơ sở dữ liệu.</p>";
-            }
-
-            $stmt->close();
-        } else {
-            echo "<p style='color:red;'>Lỗi khi tải hình ảnh.</p>";
-        }
-    }
-}
-
-$conn->close();
-?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Danh sách thể loại</title>
+	<link rel="stylesheet" href="../manager.css">
+</head>
 <style>
-form input[type="text"],
-form input[type="number"],
-form input[type="file"],
-form input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    margin-top: 5px;
+	body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg'); /* Đặt tên ảnh nền của bạn */
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-form input[type="submit"] {
-    background-color: rgb(50, 249, 249);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-form input[type="submit"]:hover {
-    background-color: #1ac6c6;
+table, th, td {
+    border: 1px solid #ddd;
 }
-.content {
-    padding: 100px 40px 40px 40px; /* đẩy nội dung xuống dưới header */
+
+th, td {
+    padding: 12px;
     text-align: center;
 }
 
-form {
-    max-width: 500px;
-    margin: auto;
-    text-align: left;
+th {
+    background-color: #4CAF50;
+    color: white;
 }
 
-</style>
+tr:hover {
+    background-color: #f1f1f1;
+}
 
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #45a049;
+    text-decoration: underline;
+}
 </style>
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <title>Thêm sản phẩm</title>
-    <link rel="stylesheet" href="manager.css">
-</head>
 <body>
 <div class="sidebar">
         <h2>Quản lý</h2>
@@ -111,9 +81,7 @@ form {
             <li id="logout"><a href="../login/test.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
         </ul>
     </div>
-
-    <!-- Nội dung chính -->
-    <div class="main-content">
+	<div class="main-content">
         <div class="header">
             <div class="search">
                 <input type="text" class="search-bar" placeholder="Tìm kiếm...">
@@ -141,21 +109,58 @@ form {
                 <img src="Logo_DutchLady.jpg" alt="Logo">
             </div>
         </div>
-    <h2>Thêm sản phẩm mới</h2>
-    <form action="" method="post" enctype="multipart/form-data">
-        <label for="name">Tên sản phẩm:</label><br>
-        <input type="text" name="name" id="name" required><br><br>
-
-        <label for="price">Giá:</label><br>
-        <input type="number" name="price" id="price" required><br><br>
-
-        <label for="category">Loại sản phẩm:</label><br>
-        <input type="text" name="category" id="category" required><br><br>
-
-        <label for="image">Hình ảnh:</label><br>
-        <input type="file" name="image" id="image" accept="image/*" required><br><br>
-
-        <input type="submit" name="submit" value="Thêm sản phẩm">
-    </form>
+<?php
+	/*B1: kết nối CSDL*/
+	require_once("ketnoi.php");
+	/*B2: viết câu lệnh sql dùng để lấy dữ liệu trong table theloai*/
+	$sql = "select * from nhacungcap ";
+	$kq = mysqli_query($conn, $sql);
+	/*$kq trả về trong câu lệnh select sẽ là 1 bảng*/
+	//$row = mysqli_fetch_assoc($kq);
+?>
+	<table border="1">
+		<!-- hàng tiêu đề -->
+		<tr>
+			<td>Tên nhà cung cấp</td>
+			<td>Địa chỉ</td>
+			<td>Ẩn hiện</td>
+			<td colspan="2"><a href="themmoi.php">Thêm</a></td>
+		</tr>
+		<!-- Các hàng nội dung -->
+		<?php
+			while($row = mysqli_fetch_assoc($kq))
+			{
+		?>
+				<tr>
+					<td>
+						<?php
+							//echo $row["id"];
+							echo $row["ten"];
+						?>
+					</td>
+					<td>
+						<?php
+							
+							echo $row["diachi"];
+						?>
+					</td>
+					<td>
+						<?php
+							if($row["anhien"] == 1)
+								echo "Hiện";
+							else
+								echo "Ẩn";
+						?>
+					</td>
+					<td><a href="capnhat.php?khoa=<?php echo $row['id']; ?>">Cập nhật</a> </td>
+					<td><a href="xoa.php?khoa=<?php echo $row['id']; ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa hay không?')">Xóa</a> </td>
+				</tr>
+		<?php
+			}
+			/*B4: đóng kết nối CSDL*/
+			mysqli_close($conn);
+		?>
+		
+	</table>
 </body>
 </html>
