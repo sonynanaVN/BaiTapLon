@@ -1,14 +1,13 @@
 
 <?php
 session_start();
-require_once("ketnoi.php");
-
+require("ketnoi.php");
 if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);
 }
 $sql = "SELECT * FROM products ORDER BY id DESC";
 $resultProducts = $conn->query($sql);
-$tenNguoiDung = "Khách";
+$tenNguoiDung = "Người dùng";
 
 if (isset($_SESSION['user_id'])) {
     $userId = $_SESSION['user_id'];
@@ -16,19 +15,18 @@ if (isset($_SESSION['user_id'])) {
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $userId);
     $stmt->execute();
-    $result = $stmt->get_result();
+    $resultuser = $stmt->get_result();
 
-    if ($row = $result->fetch_assoc()) {
+    if ($row = $resultuser->fetch_assoc()) {
         $tenNguoiDung = $row['name'];
     }
 }
 
-// Khởi tạo giỏ hàng nếu chưa tồn tại
+
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
 
-// Xử lý thêm sản phẩm vào giỏ hàng
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $productName = $_POST['name'];
     $productPrice = $_POST['price'];

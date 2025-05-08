@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once("ketnoi.php");
 if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);
