@@ -97,3 +97,7 @@ document.getElementById('chatCircle').addEventListener('click', function() {
 document.getElementById('closeChat').addEventListener('click', function() {
     document.getElementById('chatBox').style.display = 'none';
 });
+
+function showProductDetail(name, price, image) {
+    window.location.href = `chitietsanpham.php?name=${encodeURIComponent(name)}&price=${price}&image=${encodeURIComponent(image)}`;
+}

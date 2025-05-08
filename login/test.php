@@ -5,7 +5,7 @@ if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);
 }
 $msg = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
+if (isset($_POST['register'])) {
     $name      = ($_POST['name']);
     $email     = ($_POST['email']);
     $password  = $_POST['password'];
@@ -42,7 +42,6 @@ if (isset($_POST['login_user'])) {
     $email    = $_POST['login_email'];
     $password = $_POST['login_password'];
 
-    // Khởi tạo biến đếm nếu chưa có
     if (!isset($_SESSION['login_fail_count'])) {
         $_SESSION['login_fail_count'] = 0;
     }
@@ -89,15 +88,14 @@ if (isset($_POST['login_admin'])) {
 ?>
 <?php if (isset($_GET['msg'])): ?>
     <div class="alert">
-        <?= htmlspecialchars($_GET['msg']) ?>
+        <?= ($_GET['msg']) ?>
     </div>
 <?php endif; ?>
 <!-- // khách tự do -->
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+{
     if (isset($_POST['login_guest'])) {
-        // Điều hướng tới trang chính của khách
-        header("Location: guest-home.php");
+        header("Location: http://localhost/Animated%20Login%20Page/main/Main.php");
         exit();
     }
 
@@ -138,7 +136,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <a href="http://localhost/Animated%20Login%20Page/login/terms.php" target="_blank" rel="noopener">điều khoản sử dụng</a>
             </label>
         </div>
-
         <button name="register">Đăng ký</button>
     </form>
 </div>
