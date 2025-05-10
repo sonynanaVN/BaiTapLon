@@ -1,11 +1,31 @@
+<?php
+// Bắt đầu phiên làm vi
+session_start();
+
+// Kiểm tra xem có dữ liệu giỏ hàng trong session không
+if (isset($_SESSION['giohangData'])) {
+    $giohangData = $_SESSION['giohangData'];  // Lấy dữ liệu giỏ hàng từ session
+} else {
+    $giohangData = [];  // Nếu không có, khởi tạo giỏ hàng trống
+}
+
+// Khởi tạo biến tổng tiền
+$total = 0;
+
+// Tính tổng tiền của giỏ hàng
+foreach ($giohangData as $item) {
+    $total += $item['price'] * $item['quantity'];  // Cộng giá trị sản phẩm * số lượng vào tổng
+}
+// Định dạng lại tổng tiền theo định dạng Việt Nam
+$totalFormatted = number_format($total, 0, ',', '.') . " VNĐ";
+?>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Giỏ hàng</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.1-beta3/css/all.min.css">
 <style>
 body {
     font-family: 'Roboto', sans-serif;
@@ -224,7 +244,7 @@ footer button:hover {
                     <button class="increase"><i class="fas fa-plus"></i></button>
                 </div>
                 <p class="item-price">Giá tiền: 45,000 VNĐ</p>
-            </div>
+                </div>
             <button class="delete-button"><i class="fas fa-trash-alt"></i></button>
         </div>
     </main>
@@ -308,32 +328,6 @@ document.getElementById('checkout-button').addEventListener('click', function() 
     const cartItems = document.querySelectorAll('.cart-item');
     if (cartItems.length === 0) {
         alert('Giỏ hàng trống!');
-    } else {
-        // Hiển thị thông báo thành công kiểu popup
-        const successMessage = document.getElementById('success-message');
-        successMessage.style.display = 'block';
-
-        // Ẩn thông báo sau 3 giây
-        setTimeout(() => {
-            successMessage.style.display = 'none';
-        }, 3000);
-
-        // Xóa các sản phẩm trong giỏ hàng
-        cartItems.forEach(item => {
-            item.style.transition = "opacity 0.5s ease";
-            item.style.opacity = "0";
-            setTimeout(() => item.remove(), 500);
-        });
-
-        // Cập nhật tổng tiền và số lượng sản phẩm trong giỏ hàng sau khi thanh toán
-        setTimeout(calculateTotal, 600);
-    }
-});
-// Xử lý nút Thanh toán: lưu dữ liệu vào localStorage và chuyển sang checkout.html
-document.getElementById('checkout-button').addEventListener('click', function () {
-    const cartItems = document.querySelectorAll('.cart-item');
-    if (cartItems.length === 0) {
-        alert('Giỏ hàng trống!');
         return;
     }
 
@@ -347,21 +341,35 @@ document.getElementById('checkout-button').addEventListener('click', function ()
 
     const total = document.getElementById('total-price').textContent;
 
-    // Lưu vào localStorage
-    localStorage.setItem('cartData', JSON.stringify(cartData));
-    localStorage.setItem('totalPrice', total);
-
-    // Chuyển sang trang nhập thông tin giao hàng
-    window.location.href = "checkout.php";
+    // Gửi dữ liệu giỏ hàng qua AJAX
+    fetch('luu_giohang.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ items: cartData, total: total })
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.status === "success") {
+            alert("✅ Đã lưu giỏ hàng vào database!");
+            window.location.href = "checkout.php";
+        } else {
+            alert("❌ Có lỗi khi lưu giỏ hàng.");
+        }
+    })
+    .catch(error => {
+        console.error('Lỗi:', error);
+        alert("❌ Lỗi khi kết nối tới server.");
+    });
 });
+
 // Khởi tạo
 document.addEventListener('DOMContentLoaded', function() {
     attachDeleteEvent();
     attachQuantityButtons();
     calculateTotal();
 });
-
 </script>
-
 </body>
 </html>

@@ -5,6 +5,8 @@ require_once("ketnoi.php");
 if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);
 }
+$sql = "SELECT * FROM products ORDER BY id DESC";
+$resultProducts = $conn->query($sql);
 
 // Khởi tạo giỏ hàng nếu chưa tồn tại
 if (!isset($_SESSION['cart'])) {
@@ -355,7 +357,7 @@ if (isset($_SESSION['user'])) {
             <p>Chào bạn! Bạn cần giúp gì?</p>
         </div>
         <form action="message.php" method="POST">
-        <input type="text" name="message" placeholder="Nhập tin nhắn..." required style="margin-left:10px;">
+        <input type="text" name="message" placeholder="Hỗ trợ không khả dụng,vui lòng đăng nhập" readonly style="margin-left:10px;">
         <button type="submit" style="width:30px;">Gửi</button>
     </form>
     </div>
