@@ -13,31 +13,31 @@
     <div class="sidebar">
         <h2>Quản lý</h2>
         <ul>
-            <li><a href="http://localhost/Animated%20Login%20Page/Manager/manager.php"><i class="fas fa-home"></i> Doanh thu</a></li>
+            <li><a href="manager.php"><i class="home"></i> Doanh thu</a></li>
             <li>
-                <a href=""><i class="fas fa-user-cog"></i> Trình quản lý </a>
+                <a href=""><i class="user"></i> Trình quản lý </a>
                 <ul class="submenu">
-                    <li><a href="http://localhost/Animated%20Login%20Page/Manager/user/Users.php">📂 Quản lý tài khoản</a></li>
-                    <li><a href="http://localhost/Animated%20Login%20Page/Manager/Tr%c3%acnhqu%e1%ba%a3nl%c3%bds%e1%ba%a3nph%e1%ba%a9m.php">📋 Trình thêm sản phẩm</a></li>
+                    <li><a href="user/Users.php">📂 Quản lý tài khoản</a></li>
+                    <li><a href="Trìnhquảnlýsảnphẩm.php">📋 Trình thêm sản phẩm</a></li>
                 </ul>
             </li>
-            <li><a href="#"><i class="fas fa-file-invoice"></i> Đơn thanh toán</a>
+            <li><a href="#"><i class="bill"></i> Đơn thanh toán</a>
                 <ul class="submenu">
-                    <li><a href="http://localhost/Animated%20Login%20Page/Manager/Qu%e1%ba%a3nl%c3%bd%c4%91%c6%a1nh%c3%a0ng.php">🛒 Quản lý đơn hàng</a></li>
-                    <li><a href="http://localhost/Animated%20Login%20Page/Manager/thanhto%c3%a1nho%c3%a0nti%e1%bb%81n.php">💳 Thanh toán & Hoàn tiền </a></li>
+                    <li><a href="Quảnlýđơnhàng.php">🛒 Quản lý đơn hàng</a></li>
+                    <li><a href="thanhtoánhoàntiền.php">💳 Thanh toán & Hoàn tiền </a></li>
                 </ul></li>
-            <li><a href="#"><i class="fas fa-box"></i> Kho hàng</a><ul class="submenu">
-                <li><a href="http://localhost/Animated%20Login%20Page/Manager/Kho.php">📊 Tồn kho & Nhập xuất hàng</a></li>
-                <li><a href="http://localhost/Animated%20Login%20Page/Manager/Qu%e1%ba%a3nl%c3%bdnh%c3%a0cungc%e1%ba%a5p.php">🚚 Quản lý nhà cung cấp</a></li>
+            <li><a href="#"><i class="store"></i> Kho hàng</a><ul class="submenu">
+                <li><a href="Kho.php">📊 Tồn kho & Nhập xuất hàng</a></li>
+                <li><a href="NhaCungCap/danhsachNCC.php">🚚 Quản lý nhà cung cấp</a></li>
             </ul></li>
-            <li><a href="#"><i class="fas fa-users"></i> Người dùng</a><ul class="submenu">
-                <li><a href="http://localhost/Animated%20Login%20Page/Manager/messenger/H%e1%bb%97tr%e1%bb%a3kh%c3%a1chh%c3%a0ng.php">💬 Hỗ trợ khách hàng</a></li>
+            <li><a href="#"><i class="Support user"></i> Hỗ trợ người dùng</a><ul class="submenu">
+                <li><a href="messenger/Hỗtrợkháchhàng.php">💬 Hỗ trợ khách hàng</a></li>
             </ul></li>
-            <li><a href="#"><i class="fas fa-cogs"></i> Cài đặt</a><ul class="submenu">
-                <li><a href="http://localhost/Animated%20Login%20Page/Manager/setting.php">⚙️ Cài đặt chung</a></li>
-                <li><a href="http://localhost/Animated%20Login%20Page/Manager/Ch%c3%adnhs%c3%a1chv%c3%a0b%e1%ba%a3om%e1%ba%adt.php">🔒Chính sách bảo mật & Quyền riêng tư</a></li>
+            <li><a href="#"><i class="config"></i> Cài đặt</a><ul class="submenu">
+                <li><a href="setting.php">⚙️ Cài đặt chung</a></li>
+                <li><a href="chínhsáchvàbảomật.php">🔒Chính sách bảo mật & Quyền riêng tư</a></li>
             </ul></li>
-            <li id="logout"><a href="http://localhost/Animated%20Login%20Page/login/test.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            <li id="logout"><a href="../login/test.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
         </ul>
     </div>
 
@@ -60,14 +60,14 @@
                 </div>
             </div>
             <div class="avatar">
-                <img src="/login/OIP.jpg" alt="Avatar">
+                <img src="OIP.jpg" alt="Avatar">
                 <div class="dropdown">
                     <p>Thông tin tài khoản</p>
                     <p>Ghi chú</p>
                 </div>
             </div>
             <div class="logo">
-                <img src="/main/Logo_DutchLady_1.png" alt="Logo">
+                <img src="Logo_DutchLady.jpg" alt="Logo">
             </div>
         </div>
 <!-- java -->

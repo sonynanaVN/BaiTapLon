@@ -54,29 +54,29 @@ a:hover {
 <div class="sidebar">
         <h2>Quản lý</h2>
         <ul>
-            <li><a href="manager.php"><i class="home"></i> Doanh thu</a></li>
+            <li><a href="../manager.php"><i class="home"></i> Doanh thu</a></li>
             <li>
                 <a href=""><i class="user"></i> Trình quản lý </a>
                 <ul class="submenu">
-                    <li><a href="user/Users.php">📂 Quản lý tài khoản</a></li>
-                    <li><a href="Trìnhquảnlýsảnphẩm.php">📋 Trình thêm sản phẩm</a></li>
+                    <li><a href="../user/Users.php">📂 Quản lý tài khoản</a></li>
+                    <li><a href="../Trìnhquảnlýsảnphẩm.php">📋 Trình thêm sản phẩm</a></li>
                 </ul>
             </li>
             <li><a href="#"><i class="bill"></i> Đơn thanh toán</a>
                 <ul class="submenu">
-                    <li><a href="Quảnlýđơnhàng.php">🛒 Quản lý đơn hàng</a></li>
-                    <li><a href="thanhtoánhoàntiền.php">💳 Thanh toán & Hoàn tiền </a></li>
+                    <li><a href="../Quảnlýđơnhàng.php">🛒 Quản lý đơn hàng</a></li>
+                    <li><a href="../thanhtoánhoàntiền.php">💳 Thanh toán & Hoàn tiền </a></li>
                 </ul></li>
             <li><a href="#"><i class="store"></i> Kho hàng</a><ul class="submenu">
-                <li><a href="Kho.php">📊 Tồn kho & Nhập xuất hàng</a></li>
+                <li><a href="../Kho.php">📊 Tồn kho & Nhập xuất hàng</a></li>
                 <li><a href="NhaCungCap/danhsachNCC.php">🚚 Quản lý nhà cung cấp</a></li>
             </ul></li>
             <li><a href="#"><i class="Support user"></i> Hỗ trợ người dùng</a><ul class="submenu">
-                <li><a href="messenger/Hỗtrợkháchhàng.php">💬 Hỗ trợ khách hàng</a></li>
+                <li><a href="../messenger/Hỗtrợkháchhàng.php">💬 Hỗ trợ khách hàng</a></li>
             </ul></li>
             <li><a href="#"><i class="config"></i> Cài đặt</a><ul class="submenu">
-                <li><a href="setting.php">⚙️ Cài đặt chung</a></li>
-                <li><a href="chínhsáchvàbảomật.php">🔒Chính sách bảo mật & Quyền riêng tư</a></li>
+                <li><a href="../setting.php">⚙️ Cài đặt chung</a></li>
+                <li><a href="../Chínhsáchvàbảomật.php">🔒Chính sách bảo mật & Quyền riêng tư</a></li>
             </ul></li>
             <li id="logout"><a href="../login/test.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
         </ul>

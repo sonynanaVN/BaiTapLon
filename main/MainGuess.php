@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="cart-detail" id="cartDetail">
                     <p>Chưa có sản phẩm nào</p>
                     <p>Tổng: 0đ</p>
-                    <button onclick="window.location.href='giohang.php'">Thanh toán</button>
+                    <button onclick="window.location.href='â.php'">Thanh toán</button>
                 </div>
             </div>
         </div>

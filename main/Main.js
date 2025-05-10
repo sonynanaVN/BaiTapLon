@@ -25,7 +25,7 @@ function updateCart() {
         cartDetail.innerHTML = `
             ${cartItemsHTML}
             <p>Tổng: ${totalPrice}đ</p>
-            <form action="â.php" method="POST">
+            <form action="giohang.php" method="POST">
                 <input type="hidden" name="cart" value='${JSON.stringify(cart)}'>
                 <input type="hidden" name="totalPrice" value="${totalPrice}">
                 <button type="submit">Thanh toán</button>
